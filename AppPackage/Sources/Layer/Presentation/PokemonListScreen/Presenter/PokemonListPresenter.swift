@@ -48,18 +48,6 @@ public final class PokemonListPresenter: PokemonListPresenterInput {
     }
 
     public func performAdditionalRequest() async {
-//        await self.viewData.updateIsLoading(isLoading: true)
-//        do {
-//            let pokemonList = try await self.getPokemonListUseCase.execute(self.viewData.page + 1)
-//            await self.viewData.updatePage(page: self.viewData.page + 1)
-//            await self.viewData.appendPokemons(pokemons: pokemonList.pokemons)
-//        } catch {
-//            let error = PresentationError(error: .init(error), retryAction: { [weak self] in
-//                await self?.performAdditionalRequest()
-//            })
-//            await self.viewData.updateError(error)
-//        }
-//        await self.viewData.updateIsLoading(isLoading: false)
         await self.viewData.updateIsLoading(isLoading: true)
         let error = PresentationError(error: .init(NSError(domain: "test", code: 0)), retryAction: { [weak self] in
             await self?.performAdditionalRequest()

@@ -183,14 +183,8 @@ enum SupportTargets {
 
 enum PackageDependencies {
     static let allDependencies: [Package.Dependency] = [
-        logger,
         nuke,
     ]
-
-    static let logger: Package.Dependency = .package(
-        url: "https://github.com/apple/swift-log.git",
-        from: "1.0.0"
-    )
 
     static let nuke: Package.Dependency = .package(
         url: "https://github.com/kean/Nuke.git",
