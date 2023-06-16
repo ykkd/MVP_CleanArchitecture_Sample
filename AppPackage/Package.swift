@@ -114,6 +114,7 @@ enum SystemArchitectureTargets {
                     name: "PokemonListScreen",
                     dependencies: [
                         .target(name: SupportTargets.applicationDependencies.name),
+                        .target(name: SupportTargets.presentationDependencies.name),
                         .target(name: PresentationTargets.extensionTarget.value.name),
                         .target(name: PresentationTargets.sharedTarget.value.name),
                     ],
@@ -133,6 +134,7 @@ enum SupportTargets {
         sharedExtension,
         infrastructureDependencies,
         applicationDependencies,
+        presentationDependencies,
     ]
 
     static let apiWrapper = Target.target(
@@ -171,6 +173,15 @@ enum SupportTargets {
         swiftSettings: debugSwiftSettings
     )
 
+    static let presentationDependencies = Target.target(
+        name: "PresentationDependencies",
+        dependencies: [
+            .target(name: SupportTargets.dependency.name),
+        ],
+        path: "./Sources/Support/Dependency/Presentation",
+        swiftSettings: debugSwiftSettings
+    )
+
     static let sharedExtension = Target.target(
         name: "SharedExtension",
         dependencies: [],
@@ -200,6 +211,12 @@ let package = Package(
             name: "PokemonListScreen",
             targets: [
                 SystemArchitectureTargets.PresentationTargets.pokemonListTarget.value.name
+            ]
+        ),
+        .library(
+            name: "PresentationDependencies",
+            targets: [
+                SupportTargets.presentationDependencies.name,
             ]
         )
     ],

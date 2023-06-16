@@ -5,6 +5,7 @@
 //  Created by ykkd on 2023/06/15.
 //
 
+import PresentationDependencies
 import PokemonListScreen
 import UIKit
 
@@ -23,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else {
             return
         }
+        injectPresentartionDependencies()
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
@@ -57,5 +59,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+    }
+
+    private func injectPresentartionDependencies() {
+        InjectedValues[\.pokemonListScreen] = { PokemonListScreenBuilder.build() }
     }
 }

@@ -15,6 +15,7 @@
 		F022D39D2A3B0B5000987EE5 /* PokemonListScreen in Frameworks */ = {isa = PBXBuildFile; productRef = F022D39C2A3B0B5000987EE5 /* PokemonListScreen */; };
 		F022D3A02A3B0C8300987EE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022D39F2A3B0C8300987EE5 /* SceneDelegate.swift */; };
 		F022D3A22A3B0D1D00987EE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022D3A12A3B0D1D00987EE5 /* AppDelegate.swift */; };
+		F022D3A42A3C31A400987EE5 /* PresentationDependencies in Frameworks */ = {isa = PBXBuildFile; productRef = F022D3A32A3C31A400987EE5 /* PresentationDependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F022D39D2A3B0B5000987EE5 /* PokemonListScreen in Frameworks */,
+				F022D3A42A3C31A400987EE5 /* PresentationDependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +159,7 @@
 			name = MVPCleanArchitectureSample;
 			packageProductDependencies = (
 				F022D39C2A3B0B5000987EE5 /* PokemonListScreen */,
+				F022D3A32A3C31A400987EE5 /* PresentationDependencies */,
 			);
 			productName = MVPCleanArchitectureSample;
 			productReference = F022D36B2A397B8300987EE5 /* MVPCleanArchitectureSample.app */;
@@ -601,6 +604,10 @@
 		F022D39C2A3B0B5000987EE5 /* PokemonListScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PokemonListScreen;
+		};
+		F022D3A32A3C31A400987EE5 /* PresentationDependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationDependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
