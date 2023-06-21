@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D943F242A4317C60019E73E /* PokemonListRouterImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D943F232A4317C60019E73E /* PokemonListRouterImpl.swift */; };
 		F022D3732A397B8700987EE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F022D3722A397B8700987EE5 /* Assets.xcassets */; };
 		F022D3762A397B8700987EE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F022D3752A397B8700987EE5 /* Preview Assets.xcassets */; };
 		F022D3802A397B8700987EE5 /* MVPCleanArchitectureSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022D37F2A397B8700987EE5 /* MVPCleanArchitectureSampleTests.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4D943F232A4317C60019E73E /* PokemonListRouterImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonListRouterImpl.swift; sourceTree = "<group>"; };
 		F022D36B2A397B8300987EE5 /* MVPCleanArchitectureSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPCleanArchitectureSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F022D3722A397B8700987EE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F022D3752A397B8700987EE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -76,6 +78,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D943F222A4317AE0019E73E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4D943F232A4317C60019E73E /* PokemonListRouterImpl.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
 		F022D3622A397B8300987EE5 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +110,7 @@
 		F022D36D2A397B8300987EE5 /* MVPCleanArchitectureSample */ = {
 			isa = PBXGroup;
 			children = (
+				4D943F222A4317AE0019E73E /* Router */,
 				F022D39E2A3B0C5E00987EE5 /* Info.plist */,
 				F022D3722A397B8700987EE5 /* Assets.xcassets */,
 				F022D3742A397B8700987EE5 /* Preview Content */,
@@ -277,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F022D3A22A3B0D1D00987EE5 /* AppDelegate.swift in Sources */,
+				4D943F242A4317C60019E73E /* PokemonListRouterImpl.swift in Sources */,
 				F022D3A02A3B0C8300987EE5 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -9,12 +9,12 @@ import SwiftUI
 import PresentationExtension
 import SharedPresentation
 
-struct PokemonListScreenView: View {
+public struct PokemonListScreenView: View {
 
     var presenter: (any PokemonListPresenterInput)?
     @ObservedObject var viewData: PokemonListViewData
 
-    var body: some View {
+    public var body: some View {
         NavigationView {
             VStack {
                 self.content()

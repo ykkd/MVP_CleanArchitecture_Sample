@@ -64,6 +64,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     private func injectPresentartionDependencies() {
-        InjectedValues[\.pokemonListScreen] = { PokemonListScreenBuilder.build() }
+        InjectedValues[\.pokemonListRouter] = { PokemonListRouterImpl() }
     }
 }
