@@ -6,18 +6,26 @@
 //
 
 import UIKit
+import SharedPresentation
+import SwiftUI
 @_exported import Dependency
 
-// MARK: - AppEnvironmentProviderKey
-struct PokemonListScreenProviderKey: InjectionKey {
+final private class DummyRouter: Router {
+    var hostingController: UIHostingController<EmptyView>?
+    
+    typealias Content = EmptyView
+}
 
-    static var currentValue: () -> UIViewController = { UIViewController() }
+// MARK: - PokemonListRouterProviderKey
+struct PokemonListRouterProviderKey: InjectionKey {
+
+    static var currentValue: () -> any Router = { DummyRouter() }
 }
 
 extension InjectedValues {
 
-    public var pokemonListScreen: () -> UIViewController {
-        get { Self[PokemonListScreenProviderKey.self] }
-        set { Self[PokemonListScreenProviderKey.self] = newValue }
+    public var pokemonListRouter: () -> any Router {
+        get { Self[PokemonListRouterProviderKey.self] }
+        set { Self[PokemonListRouterProviderKey.self] = newValue }
     }
 }
