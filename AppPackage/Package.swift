@@ -14,10 +14,6 @@ let debugOtherSwiftFlags = [
 
 let debugSwiftSettings: [PackageDescription.SwiftSetting] = [
     .unsafeFlags(debugOtherSwiftFlags, .when(configuration: .debug)),
-    .enableUpcomingFeature("ConciseMagicFile", .when(configuration: .debug)), // SE-0274
-    .enableUpcomingFeature("ForwardTrailingClosures", .when(configuration: .debug)), // SE-0286
-    .enableUpcomingFeature("ExistentialAny", .when(configuration: .debug)), // SE-0335
-    .enableUpcomingFeature("BaseSlashRegexLiterals", .when(configuration: .debug)), // SE-0354
 ]
 
 // MARK: Targets(System Architecture)
