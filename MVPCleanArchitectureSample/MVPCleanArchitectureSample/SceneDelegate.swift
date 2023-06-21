@@ -30,7 +30,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window.makeKeyAndVisible()
 
         let vc = PokemonListScreenBuilder.build()
-        window.rootViewController = vc
+        
+        let nav = UINavigationController(rootViewController: vc)
+        window.rootViewController = nav
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
