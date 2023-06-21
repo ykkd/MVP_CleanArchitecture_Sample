@@ -1,4 +1,4 @@
-// swift-tools-version: 5.8
+// swift-tools-version: 5.7
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -105,7 +105,9 @@ enum SystemArchitectureTargets {
             case .extensionTarget:
                 return Target.target(
                     name: "PresentationExtension",
-                    dependencies: [],
+                    dependencies: [
+                        .target(name: SystemArchitectureTargets.PresentationTargets.sharedTarget.value.name),
+                    ],
                     path: "./Sources/Layer/Presentation/Extension",
                     swiftSettings: debugSwiftSettings
                 )
