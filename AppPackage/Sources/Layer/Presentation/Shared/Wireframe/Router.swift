@@ -10,7 +10,7 @@ import SwiftUI
 public protocol Router {
     associatedtype Content: View
 
-    var hostingController: UIHostingController<Content>? { get }
+    var hostingController: UIHostingController<Content>? { get set }
 
     func dismiss(_ animated: Bool)
 
@@ -31,5 +31,10 @@ extension Router {
 
     public func popToRoot(_ animated: Bool = true) {
         self.hostingController?.navigationController?.popToRootViewController(animated: animated)
+    }
+    
+    public mutating func setHostingVC<T: View>(_ vc: UIHostingController<T>) {
+        let vc = vc as! UIHostingController<Content>
+        self.hostingController = vc
     }
 }
